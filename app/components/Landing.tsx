@@ -12,6 +12,7 @@ import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollSmoother } from "gsap/ScrollSmoother"
 import { useRef } from "react"
+import { relative } from "path"
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -48,17 +49,17 @@ const Landing = () => {
             const moveAmount = 100
         
             const handleMouseMove = (e: MouseEvent) => {
-            const { innerWidth, innerHeight } = window
-            const offsetX = (e.clientX / innerWidth - 0.5) * moveAmount
-            const offsetY = (e.clientY / innerHeight - 0.5) * moveAmount
-        
-            quickToX.forEach((fn, i) => fn(initialPositions[i].x + offsetX))
-            quickToY.forEach((fn, i) => fn(initialPositions[i].y + offsetY))
+                const { innerWidth, innerHeight } = window
+                const offsetX = (e.clientX / innerWidth - 0.5) * moveAmount
+                const offsetY = (e.clientY / innerHeight - 0.5) * moveAmount
+            
+                quickToX.forEach((fn, i) => fn(initialPositions[i].x + offsetX))
+                quickToY.forEach((fn, i) => fn(initialPositions[i].y + offsetY))
             }
         
             window.addEventListener("mousemove", handleMouseMove);
 
-            gsap.to('.img1', { x: 12, y: 12, scrollTrigger: { start: 0, end: 800, scrub: true, }, });
+            gsap.to('.img1', { x: 12, y: 12, scrollTrigger: { start: 0, end: 800, scrub: true, onEnter: () => { window.removeEventListener("mousemove", handleMouseMove); }, onLeaveBack: () => { window.addEventListener("mousemove", handleMouseMove); } }, });
             gsap.to('.img2', { x: 10, y: 10, scrollTrigger: { start: 0, end: 800, scrub: true, }, });
             gsap.to('.img3', { x: 8, y: 8, scrollTrigger: { start: 0, end: 800, scrub: true, }, });
             gsap.to('.img4', { x: 6, y: 6, scrollTrigger: { start: 0, end: 800, scrub: true, }, });
@@ -93,30 +94,71 @@ const Landing = () => {
                     scrub: true,
                 },
             });
+            gsap.to('.chilt', {
+                opacity: 1,
+                scrollTrigger: {
+                    start: 950,
+                    end: 1500,
+                    scrub: true,
+                },
+            });
 
-            return () => {
-                window.removeEventListener("mousemove", handleMouseMove);
-            };
+            gsap.to('.sec2', {
+                opacity: 1,
+                y: 1,
+                scrollTrigger: {
+                    start: 500,
+                    end: 1900,
+                    scrub: true,
+                },
+            });
+            gsap.to('.landt', {
+                opacity: 0,
+                scrollTrigger: {
+                    start: 1780,
+                    end: 1840,
+                    scrub: true,
+                },
+            });
+            gsap.to('.chilt', {
+                opacity: 0,
+                scrollTrigger: {
+                    start: 1780,
+                    end: 1930,
+                    scrub: true,
+                },
+            });
+
+            gsap.to('.img1', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
+            gsap.to('.img2', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
+            gsap.to('.img3', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
+            gsap.to('.img4', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
+            gsap.to('.img5', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
+            gsap.to('.img6', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
+            gsap.to('.img7', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
+
         },
         { scope: hero }
     )
 
     return (
-        <>
-        <div className="flex items-center justify-center content-center relative min-h-screen min-w-screen bg-black" ref={hero}>
-            <img src={movimg1.src} alt="" className="w-64 fixed img1" />
-            <img src={movimg2.src} alt="" className="w-64 fixed img2" />
-            <img src={movimg3.src} alt="" className="w-64 fixed img3" />
-            <img src={movimg4.src} alt="" className="w-64 fixed img4" />
-            <img src={movimg5.src} alt="" className="w-64 fixed img5" />
-            <img src={movimg6.src} alt="" className="w-64 fixed img6" />
-            <img src={movimg7.src} alt="" className="w-64 fixed img7" />
-            <div className="title text-7xl font-semibold mix-blend-exclusion text-white z-20 fixed top-1/2 left-1/2 -translate-1/2 landt">MOVAE</div>
-            <div className="title text-3xl font-semibold mix-blend-exclusion text-white z-40 fixed top-5 left-1/2 -translate-1/2 opacity-0 navt">MOVAE</div>
+        <div ref={hero}>
+            <div className="flex items-center justify-center content-center relative min-h-screen min-w-screen bg-black" >
+                <img src={movimg1.src} alt="" className="w-64 fixed img1" />
+                <img src={movimg2.src} alt="" className="w-64 fixed img2" />
+                <img src={movimg3.src} alt="" className="w-64 fixed img3" />
+                <img src={movimg4.src} alt="" className="w-64 fixed img4" />
+                <img src={movimg5.src} alt="" className="w-64 fixed img5" />
+                <img src={movimg6.src} alt="" className="w-64 fixed img6" />
+                <img src={movimg7.src} alt="" className="w-64 fixed img7" />
+                <div className="title text-7xl font-semibold mix-blend-exclusion text-white z-20 fixed top-1/2 left-1/2 -translate-1/2 landt">MOVAE</div>
+                <div className="title text-2xl font-semibold mix-blend-exclusion text-white z-20 fixed top-75 left-1/2 -translate-1/2 opacity-0 chilt">A S &nbsp; F E A T U R E D &nbsp; I N</div>
+                <div className="title text-3xl font-semibold mix-blend-exclusion text-white z-40 fixed top-5 left-1/2 -translate-1/2 opacity-0 navt">MOVAE</div>
+            </div>
+            <div className="flex min-h-screen min-w-screen bg-black"></div>
+            <div className="flex min-h-screen min-w-screen bg-black"></div>
+            <div className="flex min-h-screen min-w-screen z-30 opacity-0 sec2 bg-gray-200"></div>
         </div>
-        <div className="flex min-h-screen min-w-screen bg-black"></div>
-        <div className="flex min-h-screen min-w-screen bg-black"></div>
-        </>
     );
 };
 
