@@ -69,7 +69,7 @@ const Landing = () => {
 
             images.forEach(selector => {
                 gsap.to(selector, {
-                    width: 1530,
+                    width: "100vw",
                     scrollTrigger: {
                         start: 800,
                         end: 1500,
@@ -87,6 +87,14 @@ const Landing = () => {
                 },
             });
             gsap.to('.navt', {
+                opacity: 1,
+                scrollTrigger: {
+                    start: 950,
+                    end: 1500,
+                    scrub: true,
+                },
+            });
+            gsap.to('.subt', {
                 opacity: 1,
                 scrollTrigger: {
                     start: 950,
@@ -135,6 +143,8 @@ const Landing = () => {
             gsap.to('.img4', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
             gsap.to('.img5', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
             gsap.to('.img6', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
+
+            
             gsap.to('.img7', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
 
         },
@@ -153,11 +163,18 @@ const Landing = () => {
                 <img src={movimg7.src} alt="" className="w-64 fixed img7" />
                 <div className="title text-7xl font-semibold mix-blend-exclusion text-white z-20 fixed top-1/2 left-1/2 -translate-1/2 landt">MOVAE</div>
                 <div className="title text-2xl font-semibold mix-blend-exclusion text-white z-20 fixed top-75 left-1/2 -translate-1/2 opacity-0 chilt">A S &nbsp; F E A T U R E D &nbsp; I N</div>
-                <div className="title text-3xl font-semibold mix-blend-exclusion text-white z-40 fixed top-5 left-1/2 -translate-1/2 opacity-0 navt">MOVAE</div>
+                <div className="title text-3xl font-semibold mix-blend-exclusion text-white z-40 fixed top-8 left-1/2 -translate-1/2 opacity-0 navt"><a href="/">MOVAE</a></div>
+                <div className="desc text-md mix-blend-exclusion text-white z-40 fixed top-8 left-50 -translate-1/2 opacity-0 subt">Learn, earn, and take your turn.</div>
             </div>
             <div className="flex min-h-screen min-w-screen bg-black"></div>
             <div className="flex min-h-screen min-w-screen bg-black"></div>
-            <div className="flex min-h-screen min-w-screen z-30 opacity-0 sec2 bg-gray-200"></div>
+            <div className="flex min-h-screen min-w-screen z-30 opacity-0 sec2 bg-gray-200">
+                <div className="grid px-20 py-30 grid-cols-4 gap-4">
+                    <div className="title col-span-2 text-7xl font-semibold">ABOUT</div>
+                    <div className="desc text-md">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam repellat accusantium blanditiis eligendi eaque officiis iste dolore quae laboriosam sit ut maxime nesciunt error ipsum aspernatur quibusdam magni, earum praesentium?</div>
+                    <div className="desc text-md">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda nostrum maiores quis, cupiditate doloremque, modi dolorum dolore eligendi perspiciatis porro nesciunt at natus, expedita quibusdam officia consequatur fugiat. Exercitationem, adipisci?</div>
+                </div>
+            </div>
         </div>
     );
 };
