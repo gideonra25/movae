@@ -136,6 +136,14 @@ const Landing = () => {
                     scrub: true,
                 },
             });
+            gsap.to('.abt', {
+                opacity: 1,
+                scrollTrigger: {
+                    start: 1830,
+                    end: 1900,
+                    scrub: true,
+                },
+            });
 
             gsap.to('.img1', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
             gsap.to('.img2', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
@@ -168,11 +176,14 @@ const Landing = () => {
             </div>
             <div className="flex min-h-screen min-w-screen bg-black"></div>
             <div className="flex min-h-screen min-w-screen bg-black"></div>
-            <div className="flex min-h-screen min-w-screen z-30 opacity-0 sec2 bg-gray-200">
-                <div className="grid px-20 py-30 grid-cols-4 gap-4">
+            <div className="block min-h-screen min-w-screen z-30 opacity-0 sec2 bg-gray-200">
+                <div className="grid px-20 py-30 grid-cols-4 gap-4 opacity-0 abt">
                     <div className="title col-span-2 text-7xl font-semibold">ABOUT</div>
                     <div className="desc text-md">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam repellat accusantium blanditiis eligendi eaque officiis iste dolore quae laboriosam sit ut maxime nesciunt error ipsum aspernatur quibusdam magni, earum praesentium?</div>
                     <div className="desc text-md">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda nostrum maiores quis, cupiditate doloremque, modi dolorum dolore eligendi perspiciatis porro nesciunt at natus, expedita quibusdam officia consequatur fugiat. Exercitationem, adipisci?</div>
+                </div>
+                <div className="block px-20 py-30">
+                    <div className="title text-7xl font-semibold">PROJECTS</div>
                 </div>
             </div>
         </div>
