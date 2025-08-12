@@ -3,6 +3,9 @@
 import movimg1 from "../../public/mov1.jpg"
 import movimg2 from "../../public/mov2.jpg"
 import movimg3 from "../../public/mov3.jpg"
+import proimg1 from "../../public/pro1.jpg"
+import proimg2 from "../../public/pro2.jpg"
+import proimg3 from "../../public/pro3.jpg"
 import movimg4 from "../../public/mov4.jpg"
 import movimg5 from "../../public/mov5.jpg"
 import movimg6 from "../../public/mov6.jpg"
@@ -184,6 +187,24 @@ const Landing = () => {
                 </div>
                 <div className="block px-20 py-30">
                     <div className="title text-7xl font-semibold">PROJECTS</div>
+                    <div className="grid grid-cols-5 px-6 py-15">
+                        <div className="col-span-4">
+                            <img src={proimg1.src} alt="" className="w-full h-150 object-cover" />
+                        </div>
+                        <div></div>
+                    </div>
+                    <div className="grid grid-cols-5 px-6 py-15">
+                        <div className="col-span-4">
+                            <img src={proimg2.src} alt="" className="w-full h-150 object-cover" />
+                        </div>
+                        <div></div>
+                    </div>
+                    <div className="grid grid-cols-5 px-6 py-15">
+                        <div className="col-span-4">
+                            <img src={proimg3.src} alt="" className="w-full h-150 object-cover" />
+                        </div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </div>
