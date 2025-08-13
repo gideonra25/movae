@@ -200,8 +200,8 @@ const Landing = () => {
                         </div>
                     </div>
                     <div className="grid grid-cols-5 px-6 py-15">
-                        <div className="col-span-4">
-                            <img src={proimg2.src} alt="" className="w-full h-150 object-cover" />
+                        <div className="col-span-4 overflow-visible">
+                            <img src={proimg2.src} alt="" className="min-w-[1200px] h-150 object-cover" />
                         </div>
                         <div className="flex justify-center items-center content-center">
                             <div className="h-90 min-w-60 p-7 items-center content-center bg-white/85 drop-shadow-xl">
@@ -212,8 +212,8 @@ const Landing = () => {
                         </div>
                     </div>
                     <div className="grid grid-cols-5 px-6 py-15">
-                        <div className="col-span-4">
-                            <img src={proimg3.src} alt="" className="w-full h-150 object-cover" />
+                        <div className="col-span-4 overflow-visible">
+                            <img src={proimg3.src} alt="" className="min-w-[1200px] h-150 object-cover" />
                         </div>
                         <div className="flex justify-center items-center content-center">
                             <div className="h-90 min-w-60 p-7 items-center content-center bg-white/85 drop-shadow-xl">
