@@ -155,8 +155,12 @@ const Landing = () => {
             gsap.to('.img5', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
             gsap.to('.img6', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
 
-            
             gsap.to('.img7', { opacity: 0, scrollTrigger: { start: 1840, end: 2300, scrub: true, }, });
+
+            gsap.to('.ovl1', { x:1200, scrollTrigger: { start: 2350, end: 2650, scrub: true, }, });
+            gsap.to('.ovl2', { x:1200, scrollTrigger: { start: 3000, end: 3300, scrub: true, }, });
+            gsap.to('.ovl3', { x:1200, scrollTrigger: { start: 3650, end: 3950, scrub: true, }, });
+
 
         },
         { scope: hero }
@@ -172,9 +176,9 @@ const Landing = () => {
                 <img src={movimg5.src} alt="" className="w-64 fixed img5" />
                 <img src={movimg6.src} alt="" className="w-64 fixed img6" />
                 <img src={movimg7.src} alt="" className="w-64 fixed img7" />
-                <div className="title text-7xl font-semibold mix-blend-exclusion text-white z-20 fixed top-1/2 left-1/2 -translate-1/2 landt">MOVAE</div>
-                <div className="title text-2xl font-semibold mix-blend-exclusion text-white z-20 fixed top-75 left-1/2 -translate-1/2 opacity-0 chilt">A S &nbsp; F E A T U R E D &nbsp; I N</div>
-                <div className="title text-3xl font-semibold mix-blend-exclusion text-white z-40 fixed top-8 left-1/2 -translate-1/2 opacity-0 navt"><a href="/">MOVAE</a></div>
+                <div className="title text-7xl font-semibold mix-blend-exclusion text-white z-20 fixed top-1/2 left-1/2 -translate-1/2 landt">movae</div>
+                <div className="title text-2xl font-semibold mix-blend-exclusion text-white z-20 fixed top-80 left-1/2 -translate-1/2 opacity-0 chilt">A S &nbsp; F E A T U R E D &nbsp; I N</div>
+                <div className="title text-3xl font-semibold mix-blend-exclusion text-white z-40 fixed top-8 left-1/2 -translate-1/2 opacity-0 navt"><a href="/">movae</a></div>
                 <div className="desc text-md mix-blend-exclusion text-white z-40 fixed top-8 left-50 -translate-1/2 opacity-0 subt">Learn, earn, and take your turn.</div>
             </div>
             <div className="flex min-h-screen min-w-screen bg-black"></div>
@@ -189,6 +193,7 @@ const Landing = () => {
                     <div className="title text-7xl font-semibold">PROJECTS</div>
                     <div className="grid grid-cols-5 px-6 py-15">
                         <div className="col-span-4 overflow-visible">
+                            <div className="ovl1 min-w-[1200px] h-150 bg-gray-200 fixed block"></div>
                             <img src={proimg1.src} alt="" className="min-w-[1200px] h-150 object-cover" />
                         </div>
                         <div className="flex justify-center items-center content-center">
@@ -201,6 +206,7 @@ const Landing = () => {
                     </div>
                     <div className="grid grid-cols-5 px-6 py-15">
                         <div className="col-span-4 overflow-visible">
+                        <div className="ovl2 min-w-[1200px] h-150 bg-gray-200 fixed block"></div>
                             <img src={proimg2.src} alt="" className="min-w-[1200px] h-150 object-cover" />
                         </div>
                         <div className="flex justify-center items-center content-center">
@@ -213,6 +219,7 @@ const Landing = () => {
                     </div>
                     <div className="grid grid-cols-5 px-6 py-15">
                         <div className="col-span-4 overflow-visible">
+                            <div className="ovl3 min-w-[1200px] h-150 bg-gray-200 fixed block"></div>
                             <img src={proimg3.src} alt="" className="min-w-[1200px] h-150 object-cover" />
                         </div>
                         <div className="flex justify-center items-center content-center">
