@@ -163,7 +163,7 @@ const Landing = () => {
     )
 
     return (
-        <div ref={hero}>
+        <div ref={hero} className="overflow-x-clip">
             <div className="flex items-center justify-center content-center relative min-h-screen min-w-screen bg-black" >
                 <img src={movimg1.src} alt="" className="w-64 fixed img1" />
                 <img src={movimg2.src} alt="" className="w-64 fixed img2" />
@@ -188,22 +188,40 @@ const Landing = () => {
                 <div className="block px-20 py-30">
                     <div className="title text-7xl font-semibold">PROJECTS</div>
                     <div className="grid grid-cols-5 px-6 py-15">
-                        <div className="col-span-4">
-                            <img src={proimg1.src} alt="" className="w-full h-150 object-cover" />
+                        <div className="col-span-4 overflow-visible">
+                            <img src={proimg1.src} alt="" className="min-w-[1200px] h-150 object-cover" />
                         </div>
-                        <div></div>
+                        <div className="flex justify-center items-center content-center">
+                            <div className="h-90 min-w-60 p-7 items-center content-center bg-white/85 drop-shadow-xl">
+                                <div className="title py-2">Sunshine Retreat</div>
+                                <div className="desc py-1 text-gray-400">Lorem ipsum dolor sit amet.</div>
+                                <div className="desc py-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nisi iusto est voluptates minus quos!</div>
+                            </div>
+                        </div>
                     </div>
                     <div className="grid grid-cols-5 px-6 py-15">
                         <div className="col-span-4">
                             <img src={proimg2.src} alt="" className="w-full h-150 object-cover" />
                         </div>
-                        <div></div>
+                        <div className="flex justify-center items-center content-center">
+                            <div className="h-90 min-w-60 p-7 items-center content-center bg-white/85 drop-shadow-xl">
+                                <div className="title py-2">Sunshine Retreat</div>
+                                <div className="desc py-1 text-gray-400">Lorem ipsum dolor sit amet.</div>
+                                <div className="desc py-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nisi iusto est voluptates minus quos!</div>
+                            </div>
+                        </div>
                     </div>
                     <div className="grid grid-cols-5 px-6 py-15">
                         <div className="col-span-4">
                             <img src={proimg3.src} alt="" className="w-full h-150 object-cover" />
                         </div>
-                        <div></div>
+                        <div className="flex justify-center items-center content-center">
+                            <div className="h-90 min-w-60 p-7 items-center content-center bg-white/85 drop-shadow-xl">
+                                <div className="title py-2">Sunshine Retreat</div>
+                                <div className="desc py-1 text-gray-400">Lorem ipsum dolor sit amet.</div>
+                                <div className="desc py-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nisi iusto est voluptates minus quos!</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
