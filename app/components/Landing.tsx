@@ -15,7 +15,8 @@ import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollSmoother } from "gsap/ScrollSmoother"
 import { useRef } from "react"
-import { relative } from "path"
+import Image from "next/image"
+import Link from "next/link"
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -169,16 +170,16 @@ const Landing = () => {
     return (
         <div ref={hero} className="overflow-x-clip">
             <div className="flex items-center justify-center content-center relative min-h-screen min-w-screen bg-black" >
-                <img src={movimg1.src} alt="" className="w-64 fixed img1" />
-                <img src={movimg2.src} alt="" className="w-64 fixed img2" />
-                <img src={movimg3.src} alt="" className="w-64 fixed img3" />
-                <img src={movimg4.src} alt="" className="w-64 fixed img4" />
-                <img src={movimg5.src} alt="" className="w-64 fixed img5" />
-                <img src={movimg6.src} alt="" className="w-64 fixed img6" />
-                <img src={movimg7.src} alt="" className="w-64 fixed img7" />
+                <Image src={movimg1} alt="" className="w-64 fixed img1" />
+                <Image src={movimg2} alt="" className="w-64 fixed img2" />
+                <Image src={movimg3} alt="" className="w-64 fixed img3" />
+                <Image src={movimg4} alt="" className="w-64 fixed img4" />
+                <Image src={movimg5} alt="" className="w-64 fixed img5" />
+                <Image src={movimg6} alt="" className="w-64 fixed img6" />
+                <Image src={movimg7} alt="" className="w-64 fixed img7" />
                 <div className="title text-7xl font-semibold mix-blend-exclusion text-white z-20 fixed top-1/2 left-1/2 -translate-1/2 landt">movae</div>
                 <div className="title text-2xl font-semibold mix-blend-exclusion text-white z-20 fixed top-80 left-1/2 -translate-1/2 opacity-0 chilt">A S &nbsp; F E A T U R E D &nbsp; I N</div>
-                <div className="title text-3xl font-semibold mix-blend-exclusion text-white z-40 fixed top-8 left-1/2 -translate-1/2 opacity-0 navt"><a href="/">movae</a></div>
+                <div className="title text-3xl font-semibold mix-blend-exclusion text-white z-40 fixed top-8 left-1/2 -translate-1/2 opacity-0 navt"><Link href="/">movae</Link></div>
                 <div className="desc text-md mix-blend-exclusion text-white z-40 fixed top-8 left-50 -translate-1/2 opacity-0 subt">Learn, earn, and take your turn.</div>
             </div>
             <div className="flex min-h-screen min-w-screen bg-black"></div>
@@ -194,7 +195,7 @@ const Landing = () => {
                     <div className="grid grid-cols-5 px-6 py-15">
                         <div className="col-span-4 overflow-visible">
                             <div className="ovl1 min-w-[1200px] h-150 bg-gray-200 fixed block"></div>
-                            <img src={proimg1.src} alt="" className="min-w-[1200px] h-150 object-cover" />
+                            <Image src={proimg1} alt="" className="min-w-[1200px] h-150 object-cover" />
                         </div>
                         <div className="flex justify-center items-center content-center">
                             <div className="h-90 min-w-60 p-7 items-center content-center bg-white/85 drop-shadow-xl">
@@ -207,7 +208,7 @@ const Landing = () => {
                     <div className="grid grid-cols-5 px-6 py-15">
                         <div className="col-span-4 overflow-visible">
                         <div className="ovl2 min-w-[1200px] h-150 bg-gray-200 fixed block"></div>
-                            <img src={proimg2.src} alt="" className="min-w-[1200px] h-150 object-cover" />
+                            <Image src={proimg2} alt="" className="min-w-[1200px] h-150 object-cover" />
                         </div>
                         <div className="flex justify-center items-center content-center">
                             <div className="h-90 min-w-60 p-7 items-center content-center bg-white/85 drop-shadow-xl">
@@ -220,7 +221,7 @@ const Landing = () => {
                     <div className="grid grid-cols-5 px-6 py-15">
                         <div className="col-span-4 overflow-visible">
                             <div className="ovl3 min-w-[1200px] h-150 bg-gray-200 fixed block"></div>
-                            <img src={proimg3.src} alt="" className="min-w-[1200px] h-150 object-cover" />
+                            <Image src={proimg3} alt="" className="min-w-[1200px] h-150 object-cover" />
                         </div>
                         <div className="flex justify-center items-center content-center">
                             <div className="h-90 min-w-60 p-7 items-center content-center bg-white/85 drop-shadow-xl">
